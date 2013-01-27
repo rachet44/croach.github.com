@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Christopher Roach</title>
-  <id>http://localhost/feed.atom</id>
+  <id>http://christopherroach.com/feed.atom</id>
   <updated>2008-12-22T00:00:00Z</updated>
-  <link href="http://localhost/" />
-  <link href="http://localhost/feed.atom" rel="self" />
+  <link href="http://christopherroach.com" />
+  <link href="http://christopherroach.com/feed.atom" rel="self" />
   <generator>Werkzeug</generator>
-  <entry xml:base="http://localhost/feed.atom">
-    <title type="text">Git for the Cocoa Developer</title>
-    <id>http://localhost/blog</id>
+  <entry xml:base="http://christopherroach.com/feed.atom">
+    <title type="text">Git for the Cocoa Developer: Remote Branching</title>
+    <id>http://christopherroach.com/blog/2008/12/22/git-for-the-cocoa-developer-remote-branching</id>
     <updated>2008-12-22T00:00:00Z</updated>
     <published>2008-12-22T00:00:00Z</published>
-    <link href="http://localhost/blog" />
+    <link href="http://christopherroach.com/blog/2008/12/22/git-for-the-cocoa-developer-remote-branching" />
     <author>
       <name>Christopher Roach</name>
     </author>
@@ -44,12 +44,12 @@
 
 &lt;p&gt;If, however, you do decide to run the checkout command with the tracking option, as we did above, you'll simply be able to call the &lt;code&gt;push&lt;/code&gt; and &lt;code&gt;pull&lt;/code&gt; commands without specifying either the remote repository or the branch name and, as my algorithms professor was always so fond of saying, everything will just work itself out in the wash.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="http://localhost/feed.atom">
-    <title type="text">Git for the Cocoa Developer</title>
-    <id>http://localhost/blog</id>
+  <entry xml:base="http://christopherroach.com/feed.atom">
+    <title type="text">Git for the Cocoa Developer: Remote Setup</title>
+    <id>http://christopherroach.com/blog/2008/12/15/git-for-the-cocoa-developer-remote-setup</id>
     <updated>2008-12-15T00:00:00Z</updated>
     <published>2008-12-15T00:00:00Z</published>
-    <link href="http://localhost/blog" />
+    <link href="http://christopherroach.com/blog/2008/12/15/git-for-the-cocoa-developer-remote-setup" />
     <author>
       <name>Christopher Roach</name>
     </author>
@@ -92,12 +92,12 @@
 
 &lt;p&gt;The one difference that I noticed with this method, as opposed to the one that I've described, is that the path to the remote repository in the &lt;code&gt;git remote add&lt;/code&gt; command had to an absolute path. When I used the host configuration method I detail above, I was able to use a path relative to my home directory on the remote machine (something to keep in mind if you try Eric's method and run into trouble). Anyway, that solution is excellent. Thanks Eric, I really appreciate the comment.&lt;/p&gt;</content>
   </entry>
-  <entry xml:base="http://localhost/feed.atom">
-    <title type="text">Git for the Cocoa Developer</title>
-    <id>http://localhost/blog</id>
+  <entry xml:base="http://christopherroach.com/feed.atom">
+    <title type="text">Git for the Cocoa Developer: A Typical Workflow</title>
+    <id>http://christopherroach.com/blog/2008/11/26/git-for-the-cocoa-developer-typical-workflow</id>
     <updated>2008-11-26T00:00:00Z</updated>
     <published>2008-11-26T00:00:00Z</published>
-    <link href="http://localhost/blog" />
+    <link href="http://christopherroach.com/blog/2008/11/26/git-for-the-cocoa-developer-typical-workflow" />
     <author>
       <name>Christopher Roach</name>
     </author>

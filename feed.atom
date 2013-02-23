@@ -1,186 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">Christopher Roach</title>
+  <title type="text">My Awesome Blog</title>
   <id>http://christopherroach.com/feed.atom</id>
-  <updated>2013-01-26T21:36:26Z</updated>
-  <link href="http://christopherroach.com" />
+  <updated>2013-02-23T14:04:45Z</updated>
+  <link href="http://christopherroach.com/" />
   <link href="http://christopherroach.com/feed.atom" rel="self" />
   <generator>Werkzeug</generator>
   <entry xml:base="http://christopherroach.com/feed.atom">
-    <title type="text">Git for the Cocoa Developer: Remote Branching</title>
-    <id>http://christopherroach.com/blog/2008/12/22/git-for-the-cocoa-developer-remote-branching</id>
-    <updated>2008-12-22T00:00:00Z</updated>
-    <published>2008-12-22T00:00:00Z</published>
-    <link href="http://christopherroach.com/blog/2008/12/22/git-for-the-cocoa-developer-remote-branching" />
+    <title type="text">My First Sublime Text Plugin: Hide Tabs</title>
+    <id>http://christopherroach.com/blog/2013/02/23/my-first-sublime-text-plugin/</id>
+    <updated>2013-02-22T00:00:00Z</updated>
+    <published>2013-02-22T00:00:00Z</published>
+    <link href="http://christopherroach.com/blog/2013/02/23/my-first-sublime-text-plugin/" />
     <author>
       <name>Christopher Roach</name>
     </author>
-    <content type="html">&lt;p&gt;If you've been following the rest of this series, so far what you've learned is how to set up a Cocoa-specific project folder, how to host a bare repository for the project on a remote server, and how to set up your local project to deal with an alternate ssh port on the remote machine. In this episode, I'll go over the few commands that you'll need to branch your project and push those branches to your remote repository.&lt;/p&gt;
-&lt;h3&gt;Creating the Remote Branch&lt;/h3&gt;
-&lt;p&gt;To create a remote branch what we'll do is create a new local branch and then push the new branch to the remote repository. Creating a new branch is easy, simply call the &lt;code&gt;git branch&lt;/code&gt; command and pass into it the name you wish to associate with the new branch. Pushing the new branch to the remote repository is just as easy. Just call the &lt;code&gt;git push&lt;/code&gt; command as we've done in earlier posts with the name of the remote repository (in our case that would be &lt;code&gt;origin&lt;/code&gt;) and append to that the name of the local branch.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% git branch &amp;lt;local_branch_name&amp;gt;
-% git push origin &amp;lt;local_branch_name&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Now that you've created a new branch, you'll probably want to begin working in it. To do that, you'll need to switch to the new branch. First, let's take a look at the branches that we have in our local project. To do so, execute &lt;code&gt;git branch&lt;/code&gt; at the command line. What you'll see is a list of all the branches in the local repository with the currently checked out branch prefaced with an asterisk. To switch to the new branch, execute the following line:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% git checkout &amp;lt;branch_name&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Now, if you run the &lt;code&gt;git branch&lt;/code&gt; command again, you'll see the same list, but this time the new branch you created will marked as the currently checked out one.&lt;/p&gt;
-&lt;h3&gt;Properly Tracking the Remote Branch&lt;/h3&gt;
-&lt;p&gt;Now, you could use the checkout command that was demonstrated in the section above, however, that command will simply checkout the branch, it won't set it up to track the remote branch. What that means is that you'll need to add the remote repository name and the remote branch name to each &lt;code&gt;push&lt;/code&gt; and &lt;code&gt;pull&lt;/code&gt; command that you issue while working in this branch. If you find that a bit annoying, and you really just want to call &lt;code&gt;push&lt;/code&gt; and &lt;code&gt;pull&lt;/code&gt; and have Git figure out the details of where everything is supposed to go, you're in luck. The Git checkout command offers an option to specify the remote branch that it is supposed to be tracking. So, instead of calling the checkout command with nothing more than our local branch's name, as we did in the previous section, what you'll want to do is specify the track branch option and give it the name of the remote branch you wish to track. The command will then look like the following:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% git checkout --track -b &amp;lt;local_branch_name&amp;gt; &lt;span class="se"&gt;\&lt;/span&gt;
-    origin/&amp;lt;remote_branch_name&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Keep in mind that the line above is totally optional. If you choose not to set up your local branch to automatically track the correct branch remotely, you'll simply have to identify the branch that you are pushing and pulling to and from like so:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% git push origin &amp;lt;remote_branch_name&amp;gt;
-% git pull origin &amp;lt;remote_branch_name&amp;gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;If, however, you do decide to run the checkout command with the tracking option, as we did above, you'll simply be able to call the &lt;code&gt;push&lt;/code&gt; and &lt;code&gt;pull&lt;/code&gt; commands without specifying either the remote repository or the branch name and, as my algorithms professor was always so fond of saying, everything will just work itself out in the wash.&lt;/p&gt;</content>
-  </entry>
-  <entry xml:base="http://christopherroach.com/feed.atom">
-    <title type="text">Git for the Cocoa Developer: Remote Setup</title>
-    <id>http://christopherroach.com/blog/2008/12/15/git-for-the-cocoa-developer-remote-setup</id>
-    <updated>2008-12-15T00:00:00Z</updated>
-    <published>2008-12-15T00:00:00Z</published>
-    <link href="http://christopherroach.com/blog/2008/12/15/git-for-the-cocoa-developer-remote-setup" />
-    <author>
-      <name>Christopher Roach</name>
-    </author>
-    <content type="html">&lt;p&gt;If your remote repository exists on a server whose &lt;code&gt;ssh&lt;/code&gt; server is relegated to something other than the typical port, you might find it hard to connect to your repository with Git. Git offers---as far as I can tell---no command line option to change the default port number to one of your own choosing. So, in order to get your work done, you'll have to add a new host configuration to your user-scoped &lt;code&gt;ssh&lt;/code&gt; config file. The rest of this post deals with creating a new host configuration and setting up your Git repositories to use the new configuration when connecting to a remote repository.&lt;/p&gt;
-&lt;p&gt;To add a new host configuration to ssh, you'll need to open the config file which can be found at &lt;code&gt;~/.ssh/config&lt;/code&gt;, or, if one doesn't currently exist at that location, you can just create a new config file. After you've opened---or created, if necessary---the config file, you'll need to add a new configuration just like the one I've listed below.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nb"&gt;Host&lt;/span&gt; mygitrepo
-&lt;span class="nb"&gt;Hostname&lt;/span&gt; christopherroach.com
-&lt;span class="nb"&gt;Port&lt;/span&gt; &lt;span class="m"&gt;2222&lt;/span&gt;
-&lt;span class="nb"&gt;User&lt;/span&gt; remote_username
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Each new host configuration in your &lt;code&gt;ssh&lt;/code&gt; config file must contain a &lt;code&gt;Host&lt;/code&gt; key, value pair. This will take the place of the hostname that you usually pass into the &lt;code&gt;ssh&lt;/code&gt; command when opening a new connection to a remote server. Next, is the &lt;code&gt;Hostname&lt;/code&gt; key, value pair in which you will designate the url of your remote repository. The &lt;code&gt;Port&lt;/code&gt; option is, obviously, the port on which the remote &lt;code&gt;ssh&lt;/code&gt; daemon is listening. Finally, and this one is completely optional, you can add the &lt;code&gt;User&lt;/code&gt; key, value pair which allows you to designate the user name that you use to log into the remote machine through ssh. If you do not include this option, you'll be prompted to enter your user name along with your password when doing anything over ssh to the designated remote machine. &lt;/p&gt;
-&lt;p&gt;When all is said and done, the following command:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% ssh mygitrepo
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;will be equivalent to:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% ssh -p 2222 christopherroach.com
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;My suggestion is that you add the host configuration to your &lt;code&gt;.ssh/config&lt;/code&gt; file and try it out with the &lt;code&gt;ssh&lt;/code&gt; command above to make sure it works before trying out a git operation with the new setup---it's always a good idea to debug one application at a time. After you've proven that you entered everything correctly with the &lt;code&gt;ssh&lt;/code&gt; command, it's time to set up your git repo to use the new host configuration. To do so, just &lt;code&gt;cd&lt;/code&gt; into your local project directory and add the remote repo with the following command:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% git remote add origin mygitrepo:path/to/git/repo.git
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;After doing that, you should be able to push and pull to and from the new repo with the following lines (assuming that &lt;code&gt;master&lt;/code&gt; is the branch you wish to work with):&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% git push origin master
-% git pull origin master
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;That should be all you need to do to use Git with a remote repository whose &lt;code&gt;ssh&lt;/code&gt; server listens on a port other than the default port 22.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; In the comments below, Eric points out yet another great way to get your local repository working with a remote server whose ssh daemon runs on a non-traditional port. Rather than adding a new host configuration to your &lt;code&gt;ssh&lt;/code&gt; config file, you can setup each project to work with the remote repo with the following command, issued from within the local git repo, instead:&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;% git remote add origin ssh://user@host:PORT/path/to/repo.git
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;The one difference that I noticed with this method, as opposed to the one that I've described, is that the path to the remote repository in the &lt;code&gt;git remote add&lt;/code&gt; command had to an absolute path. When I used the host configuration method I detail above, I was able to use a path relative to my home directory on the remote machine (something to keep in mind if you try Eric's method and run into trouble). Anyway, that solution is excellent. Thanks Eric, I really appreciate the comment.&lt;/p&gt;</content>
-  </entry>
-  <entry xml:base="http://christopherroach.com/feed.atom">
-    <title type="text">Git for the Cocoa Developer: A Typical Workflow</title>
-    <id>http://christopherroach.com/blog/2008/11/26/git-for-the-cocoa-developer-typical-workflow</id>
-    <updated>2008-11-26T00:00:00Z</updated>
-    <published>2008-11-26T00:00:00Z</published>
-    <link href="http://christopherroach.com/blog/2008/11/26/git-for-the-cocoa-developer-typical-workflow" />
-    <author>
-      <name>Christopher Roach</name>
-    </author>
-    <content type="html">&lt;p&gt;Lately I've been doing a bit of Cocoa development. To be perfectly honest, Between an &lt;a href="http://en.wikipedia.org/wiki/Agent-based_model"&gt;ABM&lt;/a&gt; Simulation Framework I've been working on (I'll talk about this a bit more in a future post) and the &lt;a href="http://www.stanford.edu/class/cs193p/cgi-bin/index.php"&gt;iPhone development class&lt;/a&gt; that I'm taking, I've actually been doing quite a lot of Cocoa development. Now, I like to use some type source control system when I develop software, even when I'm developing by myself. I also typically like to use a distributed source control system (the reasons for why are another blog post for another time when I'm feeling a bit more iconoclastic) such as Mercurial or Git. When I started developing my ABM framework I decided that I would give SVN a try since support for it was built into Xcode and typically if you try not to fight the tools, you find that development is quite a bit easier. Unfortunately, this time that didn't ring true. From the get-go I ran into troubles, and considering my disdain for SVN and all the other centralized repository systems, I decided to drop it and go with Git instead.&lt;/p&gt;
-&lt;p&gt;The rest of this post deals with everything I've learned along the way. Aside from being a repository for me of all the tasks I commonly do with Git, I'm hoping that this post will act as a quick start guide for anyone who's interested in using Git for their Cocoa development source control needs. So, enjoy the post, and if anyone runs into anything that's not properly explained or if there's a topic that you think is missing, leave a comment, and I'll do my best to update this post or create a new one if the topic is big enough to deserve one.&lt;/p&gt;
-&lt;h3&gt;Gittin' Git&lt;/h3&gt;
-&lt;p&gt;To get started, the very first thing that you'll need to do is get Git installed on your system. I've found that, by far, the easiest way to do this is just to download the OS X installer from &lt;a href="http://code.google.com/p/git-osx-installer/" title="Git OS X Installer"&gt;Google Code&lt;/a&gt; and run through it, rather than trying to build it from source, which can be a slight pain to do so.&lt;/p&gt;
-&lt;h3&gt;My Typical Workflow&lt;/h3&gt;
-&lt;p&gt;Whenever I setup a new Xcode project, the first thing I do is initialize it as a Git repository and add some configuration to the project that will make using Git with Xcode a bit less messy. I also typically create a remote repository, without a working set of code (i.e., a bare repository), that I use as a way of transferring my code between the different machines I use for development. Finally, I add some files to the newly created project, make the initial commit, and push the changes to the remote repository.&lt;/p&gt;
-&lt;h5&gt;Create a new remote repository&lt;/h5&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;ssh url.to.remote.server.com
-&lt;span class="nv"&gt;$ &lt;/span&gt;mkdir -p /path/to/repo/myrepo.git
-&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /path/to/repo/myrepo.git
-&lt;span class="nv"&gt;$ &lt;/span&gt;git --bare init
-&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;exit&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5&gt;Create a new local repository&lt;/h5&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /path/to/new/project/MyProject
-&lt;span class="nv"&gt;$ &lt;/span&gt;git init
-&lt;span class="nv"&gt;$ &lt;/span&gt;git remote add origin &lt;span class="se"&gt;\&lt;/span&gt;
-  url.to.remote.server.com:path/to/repo.git
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5&gt;Config the repository for Cocoa development&lt;/h5&gt;
-&lt;p&gt;The configuration that we will be specifying for our Git project will be contained in two hidden files: &lt;code&gt;.gitignore&lt;/code&gt; and &lt;code&gt;.gitattributes&lt;/code&gt;. The format for both of these files is very simple, its just a list of &lt;a href="http://en.wikipedia.org/wiki/Globbing" title="Wikipedia: glob"&gt;globs&lt;/a&gt;, representing a set of files with the second file (&lt;code&gt;.gitattributes&lt;/code&gt;) also specifying how each file should be treated by Git with special attributes.&lt;/p&gt;
-&lt;p&gt;First, create a &lt;code&gt;.gitignore&lt;/code&gt; file. This file is responsible for telling Git which files you feel it doesn't need to track. We'll be telling Git to ignore some Xcode and OS X noisiness, the build directory's contents, and anything related to SVN. Below is the contents of the &lt;code&gt;.gitignore&lt;/code&gt; file that you will create and add to the root directory of your new Xcode project with whatever text editor you find yourself partial to.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;####################&lt;/span&gt;
-&lt;span class="c"&gt;# .gitignore&lt;/span&gt;
-&lt;span class="c"&gt;####################&lt;/span&gt;
-
-&lt;span class="c"&gt;# xcode noise&lt;/span&gt;
-build/*
-*.mode1v3
-
-&lt;span class="c"&gt;# SVN directories&lt;/span&gt;
-.svn
-
-&lt;span class="c"&gt;# osx noise&lt;/span&gt;
-.DS_Store
-profile
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Next, create a &lt;code&gt;.gitattributes&lt;/code&gt; file to specify how we would like Git to treat specific files in our Xcode project.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c"&gt;######################&lt;/span&gt;
-&lt;span class="c"&gt;# .gitattributes&lt;/span&gt;
-&lt;span class="c"&gt;######################&lt;/span&gt;
-
-*.pbxproj -crlf -diff -merge
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;In the example above, each of the globs describing a set of files is paired with a set of attributes that detail how the resultant files should be treated. With the first two attributes (i.e., &lt;code&gt;-crlf&lt;/code&gt; &lt;code&gt;-diff&lt;/code&gt;), we are telling Git to treat all Xcode project files with the &lt;code&gt;.pbxproj&lt;/code&gt; as a binary and thus preventing Git from reporting differences in newlines or showing it in diffs. The last attribute, &lt;code&gt;-merge&lt;/code&gt;, tells Git to exclude the project files from merges.&lt;/p&gt;
-&lt;h5&gt;Add some files&lt;/h5&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;touch newfile
-&lt;span class="nv"&gt;$ &lt;/span&gt;git status
-&lt;span class="nv"&gt;$ &lt;/span&gt;git add .
-&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s2"&gt;&amp;quot;Initial check-in&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5&gt;Push the changes to the origin (remote repository)&lt;/h5&gt;
-&lt;p&gt;At this point in time we have just one branch, the master branch, so we'll be specifying it when we push our changes to the origin. In future posts, I'll show you how to create branches and add them to remote repository.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git push origin master
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5&gt;Check out the project from another machine&lt;/h5&gt;
-&lt;p&gt;Once we've pushed our initial changes to the master branch to the remote repository, we'll be able to access the project from any machine that has Git installed on it. To check out a fresh copy of the project from the remote repository, you'll run the following from the command line of the machine to which you want to check out the code.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git clone &lt;span class="se"&gt;\&lt;/span&gt;
-  url.to.remote.server.com:path/to/repo.git
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h5&gt;Update a local copy with the latest changes&lt;/h5&gt;
-&lt;p&gt;Finally, if you've got a local copy of the repository on several different machines and you want to make sure that the one you're currently working on has the latest set of changes, you'll run the &lt;code&gt;pull&lt;/code&gt; command with the repository and branch from which you want to pull the changes.&lt;/p&gt;
-&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git pull origin master
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Well, that's pretty much everything that you'll need to get you started with Cocoa development using Git for your source control management needs. I hope you enjoyed the post and found it useful. Keep your eyes peeled to this weblog for future posts on using Git with Xcode for Cocoa development.&lt;/p&gt;</content>
+    <content type="html">&lt;p&gt;I'm very happy to anounce that my very first Sublime Text plugin just went live a couple of days ago!&lt;/p&gt;
+&lt;p&gt;It's a simple little plugin that automatically shows and hides the tab bar depending on how many files you currently have open. If you've used Safari or TextMate then you're already familiar with how this feature works. If you'd like to see it in action, checkout the video below, otherwise, if you'd like to just go ahead and install it and give it a try, you can do so through Will Bond's fantastic &lt;a href="http://wbond.net/sublime_packages/community"&gt;Package Manager&lt;/a&gt; by just searching for Hide Tabs, or you can download and install it yourself from its &lt;a href="https://github.com/croach/SublimeHideTabs"&gt;GitHub page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I hope you like it.&lt;/p&gt;
+&lt;iframe src="http://player.vimeo.com/video/60277315?byline=0&amp;amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;</content>
   </entry>
 </feed>
